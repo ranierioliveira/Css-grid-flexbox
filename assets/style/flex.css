@@ -11,3 +11,16 @@
         column-gap: 75px;
     }
 }
+
+@media (min-width:720px){
+    .menu{
+        column-gap: 105px;
+        flex-wrap: nowrap;
+    }
+    .menu__item:nth-child(1){
+        order: -2;
+    }
+    .menu__item:nth-child(5){
+        order: -1;
+    }
+}
