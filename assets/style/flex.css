@@ -14,6 +14,23 @@
     row-gap: 0.5rem;
 }
 
+/*Destaques*/
+
+.destaques{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.destaques__barra{
+    flex-grow: 1;
+}
+
+.eventos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 @media (min-width:720px){
     
     /* Cabeçalho */
