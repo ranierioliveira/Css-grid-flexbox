@@ -35,6 +35,38 @@
     flex-grow: 1;
     max-width: 400px;
 }
+.eventos__item:nth-child(5){
+    display: none;
+}
+.eventos__item:nth-child(6){
+    display: none;
+}
+.eventos__item:nth-child(7){
+    display: none;
+}
+.eventos__item:nth-child(8){
+    display: none;
+}
+.agenda__item:nth-child(5){
+    display: none;
+}
+.agenda__item:nth-child(6){
+    display: none;
+}
+
+/*Coloque na sua agenda*/
+
+.agenda__lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+}
+.agenda__item{
+    flex-grow: 1;
+    max-width: 400px;
+}
+
 
 @media (min-width:720px){
     
@@ -53,6 +85,11 @@
     .eventos__lista{
         justify-content: end;
     }
+    .agenda__lista{
+        justify-content: end;
+    }
+    
+
 }
 
 @media (min-width: 1440px){
