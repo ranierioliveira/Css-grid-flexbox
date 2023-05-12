@@ -98,10 +98,22 @@
         column-gap: 105px;
         flex-wrap: nowrap;
     }
-    .menu__item:nth-child(1){
-        order: -2;
+    .eventos__item:nth-child(5){
+        display: grid;
     }
-    .menu__item:nth-child(5){
-        order: -1;
+    .eventos__item:nth-child(6){
+        display: grid;
+    }
+    .eventos__item:nth-child(7){
+        display: grid;
+    }
+    .eventos__item:nth-child(8){
+        display: grid;
+    }
+    .agenda__item:nth-child(5){
+        display: grid;
+    }
+    .agenda__item:nth-child(6){
+        display: grid;
     }
 }
