@@ -62,7 +62,7 @@ img{
     flex: 1 1 200px;
 }
 
-/* Css Flex Grid */
+/*Flex Grid1*/
 
 .grid1{
     display: grid;
@@ -84,6 +84,8 @@ img{
     display: block;
 }
 
+/*Flex Grid2*/
+
 section.grid2{
     display: grid;
     grid-template-columns: 1fr 200px;
@@ -92,9 +94,39 @@ section.grid2{
     margin: 0 auto;
     padding: 10;
 }
+.sidebar > div{
+    margin-bottom: 10px;
+}
 
+/*Flex Grid3*/
 
-
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+}
+.grid3-item:nth-child(1){
+    grid-row: 1/3;
+}
+.grid3-item{
+    display: grid;
+}
+.grid3-item img{
+    grid-column: 1;
+    grid-row: 1/3; /*ocupando todo o espaço*/
+    align-self: end;
+}
+.grid3-item p{
+    background-color: #1d1e2083;
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2; /*Ocupa a segunda linha sobrepondo a imagem*/
+    align-self: end;
+}
 
 @media (max-width: 600px){
     .grid1{
@@ -106,5 +138,16 @@ section.grid2{
     .grid1 div.anuncio{
         grid-row: auto;
         grid-column: auto;
+    }
+    section.grid2{
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        display: flex;
+        overflow: scroll;
+    }
+    .sidebar > div{
+       flex: 1 0 200px; 
+       margin: 0 10px; 
     }
 }
