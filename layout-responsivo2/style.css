@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.itens{
+    text-transform: uppercase;
+    color: white;
+    min-width: 248px;
+    padding: 43px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-grow: 1;
+}
+.itens:nth-child(1){
+    background-color: brown;
+}
+.itens:nth-child(2){
+    background-color: cadetblue;
+}
+.itens:nth-child(3){
+    background-color: crimson;
+}
+.itens:nth-child(4){
+    background-color: darkslateblue;
+}
+.itens:nth-child(5){
+    background-color: deepskyblue;
+}
+.itens:nth-child(6){
+    background-color: grey;
+}
+.itens:nth-child(7){
+    background-color: coral;
+}
+.itens:nth-child(8){
+    background-color: black;
+}
+.toolbar{
+    display: none;
+}
+
+
+@media (min-width:768px){
+    .grid{
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 100px repeat(2, 2fr) repeat(2, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image"
+        ;
+    }
+    .header{
+        grid-area: header;
+    }
+    .menu{
+        grid-area: menu;
+    }
+    .hero{
+        grid-area: hero;
+    }
+    .main{
+        grid-area: main;
+    }
+    .banner{
+        grid-area: banner;
+    }
+    .extra{
+        grid-area: extra;
+    }
+    .image{
+        grid-area: image;
+    }
+    .toolbar{
+        display: none;
+    }
+}
+@media (min-width:992px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px 3fr repeat(2, 1fr) 150px;
+        grid-template-areas: 
+        "header menu menu menu"
+        "hero hero hero hero"
+        "main main . image"
+        "main main . extra"
+        "banner banner banner banner"
+        ;
+    }
+    .header{
+        grid-area: header;
+    }
+    .menu{
+        grid-area: menu;
+    }
+    .hero{
+        grid-area: hero;
+    }
+    .main{
+        grid-area: main;
+    }
+    .banner{
+        grid-area: banner;
+    }
+    .extra{
+        grid-area: extra;
+    }
+    .image{
+        grid-area: image;
+    }
+    .toolbar{
+        display: block;
+        opacity: .65;
+        grid-column: 4;
+        grid-row: 1 / 6;
+    }
+}
